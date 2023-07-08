@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*HEADER*/
+
+header{
+    background-color: rgb(0, 110, 255);
+    font-size: large;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.contenedor-barra{
+    padding: 1rem 2rem;
+}
+
+.contenedor-barra span{
+    font-size: x-large;
+}
+
+.paginas{
+    justify-content: end;
+}
+
+.nav-link{
+    min-width: 5rem;
+    text-align: center;
+    color: white;
+}
+
+.nav-link:hover{
+    background-color: rgb(0, 38, 255);
+    color: white;
+}
+
+.active{
+    font-weight: bold;
+}
+
+/*MAIN*/
+
+main{
+    height: 100vh;
+}
+
+/*FOOTER*/
+
+footer{
+    background-color: gainsboro;
+    padding: 1%;
+    text-align: center;
+}
