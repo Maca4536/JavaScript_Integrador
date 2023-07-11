@@ -85,7 +85,7 @@ input{
     border-radius: 5px;
 }
 
-button{
+.enviar{
     width: 5rem;
     height: 2.5rem;
     font-size: large;
@@ -94,6 +94,10 @@ button{
     color: white;
     border: 0;
     border-radius: 5px;
+}
+
+button:hover{
+    background-color: rgb(0, 77, 221);
 }
 
 /*FOOTER*/

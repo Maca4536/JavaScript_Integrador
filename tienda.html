@@ -35,7 +35,23 @@
       </nav>
     </header>
 
-    <main></main>
+    <main>
+      <div class="agregar_prod">
+        <h2>Agreagar Producto</h2>
+
+        <form>
+          <label for="nombre_prod">Nombre del producto</label>
+          <input type="text" id="nombre_prod" required>
+          <label for="precio">Precio</label>
+          <input type="number" id="precio" min="0" oninput="validity.valid||(value='');" step="any" required>
+          <button type="submit" class="btn btn-primary" id="agregar">Agregar</button>
+        </form>
+      </div>
+
+      <hr>
+
+      <section id="contenedor-cards"></section>
+    </main>
     <footer>
       <h3>Footer</h3>
     </footer>
