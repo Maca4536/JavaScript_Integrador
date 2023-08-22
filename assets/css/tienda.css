@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*HEADER*/
+
+header{
+    background-color: rgb(0, 110, 255);
+    font-size: large;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.contenedor-barra{
+    padding: 1rem 2rem;
+}
+
+.contenedor-barra span{
+    font-size: x-large;
+}
+
+.paginas{
+    justify-content: end;
+}
+
+.nav-link{
+    min-width: 5rem;
+    text-align: center;
+    color: white;
+}
+
+.nav-link:hover{
+    background-color: rgb(0, 38, 255);
+    color: white;
+}
+
+.active{
+    font-weight: bold;
+}
+
+/*MAIN*/
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#agregar_prod{
+    width: 30rem;
+    margin: 1rem 0;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#agregar_prod form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+h2{
+    margin-bottom: 2rem;
+}
+
+label{
+    font-size: large;
+}
+
+input{
+    width: 100%;
+    margin: 0.5rem 0 2rem 0;
+    padding: 1% 2%;
+    font-size: large;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#agregar{
+    align-self: center;
+}
+
+hr{
+    width: 95%;
+    color: black;
+}
+
+#contenedor-cards{
+    margin: 4rem 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 2rem;
+    column-gap: 2rem;
+}
+
+.card-body a{
+    width: 100%;
+}
+
+/*FOOTER*/
+
+footer{
+    background-color: gainsboro;
+    padding: 1%;
+    text-align: center;
+}
+
+/*MEDIA QUERYS*/
+
+@media (max-width: 1400px){
+    #contenedor-cards{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px){
+    #contenedor-cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 680px){
+    #contenedor-cards{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

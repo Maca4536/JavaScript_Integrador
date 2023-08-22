@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*HEADER*/
+
+header{
+    background-color: rgb(0, 110, 255);
+    font-size: large;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.contenedor-barra{
+    padding: 1rem 2rem;
+}
+
+.contenedor-barra span{
+    font-size: x-large;
+}
+
+.paginas{
+    justify-content: end;
+}
+
+.nav-link{
+    min-width: 5rem;
+    text-align: center;
+    color: white;
+}
+
+.nav-link:hover{
+    background-color: rgb(0, 38, 255);
+    color: white;
+}
+
+.active{
+    font-weight: bold;
+}
+
+/*MAIN*/
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h2{
+    margin: 1rem;
+}
+
+#contenedor_carrito_vacio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.comprar_vaciar{
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.comprar_vaciar button{
+    width: 10rem;
+}
+
+#prods_carrito{
+    margin: 4rem 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 2rem;
+    column-gap: 2rem;
+}
+
+/*FOOTER*/
+
+footer{
+    background-color: gainsboro;
+    padding: 1%;
+    text-align: center;
+}
+
+/*MEDIA QUERYS*/
+
+@media (max-width: 1400px){
+    #prods_carrito{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px){
+    #prods_carrito{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 680px){
+    #prods_carrito{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
