@@ -26,6 +26,12 @@ header{
     justify-content: end;
 }
 
+.nav-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .nav-link{
     min-width: 5rem;
     text-align: center;
@@ -39,6 +45,11 @@ header{
 
 .active{
     font-weight: bold;
+}
+
+#foto_perfil{
+    margin-left: 1rem;
+    border-radius: 50%;
 }
 
 /*MAIN*/

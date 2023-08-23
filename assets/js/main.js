@@ -11,6 +11,28 @@ let card_btn;
 let agregar_prod = document.getElementById("agregar_prod");
 let sesion = document.getElementById("sesion");
 
+async function cargarUsuario(){
+    let perfil;
+    let perfilCargado = JSON.parse(localStorage.getItem("perfil"));
+
+    if(!localStorage.getItem("perfil")){
+        console.log("Perfil");
+        perfil = await fetch('https://randomuser.me/api/');
+        perfil = await perfil.json();
+        sesion.innerText = `${perfil.results[0].name.first} ${perfil.results[0].name.last}`;
+        sesion.innerHTML += `<img src="${perfil.results[0].picture.thumbnail}" alt="Foto de perfil" id="foto_perfil">`;
+        localStorage.setItem("perfil", JSON.stringify(perfil));
+    }
+    
+    else {
+        console.log("Perfil Cargado");
+        sesion.innerText = `${perfilCargado.results[0].name.first} ${perfilCargado.results[0].name.last}`;
+        sesion.innerHTML += `<img src="${perfilCargado.results[0].picture.thumbnail}" alt="Foto de perfil" id="foto_perfil">`;
+        localStorage.setItem("perfil", JSON.stringify(perfilCargado));
+    }
+    
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     if(localStorage.getItem("productos")){
         productos = JSON.parse(localStorage.getItem("productos"));
@@ -37,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     else{
-        sesion.innerText = "Administrador";
+        cargarUsuario();
     }
     
     productos.forEach((producto) => {
